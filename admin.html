@@ -5,20 +5,34 @@
 </head>
 <body>
 
-  <h1>Add Update</h1>
+  <!-- ⭐ EVERYTHING INSIDE THIS DIV WILL BE LOCKED ⭐ -->
+  <div id="adminContent">
 
-  <form id="updateForm">
-    <input type="text" id="version" placeholder="Version (e.g., 1.21.0)" required>
-    <input type="text" id="caption" placeholder="Caption" required>
-    <input type="text" id="image" placeholder="Image URL" required>
-    <button type="submit">Add Update</button>
-  </form>
+    <h1>Add Update</h1>
 
-  <p id="status"></p>
+    <form id="updateForm">
+      <input type="text" id="version" placeholder="Version (e.g., 1.21.0)" required>
+      <input type="text" id="caption" placeholder="Caption" required>
+      <input type="text" id="image" placeholder="Image URL" required>
+      <button type="submit">Add Update</button>
+    </form>
+
+    <p id="status"></p>
+
+    <h2>Existing Updates</h2>
+    <div id="updatesList"></div>
+
+  </div>
+  <!-- ⭐ END OF LOCKED CONTENT ⭐ -->
+
+  <!-- ⭐ PIN SECTION AT THE BOTTOM ⭐ -->
+  <div id="adminPinLock" style="margin-top:40px; padding:20px; border-top:1px solid #ccc;">
+    <h3>Admin Access</h3>
+    <input type="password" id="pinInput" placeholder="Enter PIN">
+    <button id="pinSubmit">Unlock</button>
+    <p id="pinStatus"></p>
+  </div>
 
   <script src="admin.js"></script>
 </body>
 </html>
-
-<h2>Existing Updates</h2>
-<div id="updatesList"></div>
