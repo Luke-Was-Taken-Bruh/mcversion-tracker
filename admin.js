@@ -38,7 +38,7 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
     updates.push(newUpdate);
 
     // 3. Save back to JSONBin
-    const saveRes = await fetch(API_URL, {
+    const saveRes = await fetch(LATEST_URL, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
