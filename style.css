@@ -72,9 +72,74 @@ h1 {
   0% { transform: scale(0.2); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
-#stevebot-container {
-  z-index: 9999;
-}
-#stevebot-container {
+
+/* Sidebar */
+#stevebot-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hidden off-screen */
+  width: 300px;
+  height: 100%;
   background: #1e1e1e;
+  border-left: 3px solid #3a3a3a;
+  padding: 10px;
+  color: white;
+  transition: right 0.3s ease;
+  z-index: 9998;
+}
+
+#stevebot-sidebar.open {
+  right: 0; /* Slide in */
+}
+
+/* Header */
+#stevebot-header {
+  font-weight: bold;
+  text-align: center;
+  background: #3a3a3a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Messages */
+#stevebot-messages {
+  height: 70%;
+  overflow-y: auto;
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Input + Send */
+#stevebot-input {
+  width: calc(100% - 60px);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+#stevebot-send {
+  width: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Top button */
+#stevebot-open {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
 }
