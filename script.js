@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 });
 
 // 🌿 Load updates from JSONBin
-fetch("https://api.jsonbin.io/v3/b/6a581c12da38895dfe639966/latest")
+fetch("https://api.jsonbin.io/v3/b/6a590637da38895dfe66e344/latest")
   .then(res => res.json())
   .then(data => {
     let updates = data.record.updates;
