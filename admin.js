@@ -24,7 +24,7 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
       }
     });
 
-    const data = await getRes.json();
+    const data = await saveRes.json();
     let updates = data.record.updates || [];
 
     // 2. Add new update
