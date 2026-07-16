@@ -29,3 +29,36 @@ fetch("https://api.jsonbin.io/v3/b/6a590637da38895dfe66e344/latest")
       container.appendChild(card);
     });
   });
+const BIN_ID = "YOUR_BIN_ID";
+const API_KEY = "YOUR_API_KEY";
+
+async function incrementVisit() {
+  const url = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
+
+  // 1. Get current count
+  const getRes = await fetch(url, {
+    headers: {
+      "X-Master-Key": API_KEY
+    }
+  });
+  const data = await getRes.json();
+  const current = data.record.visits;
+
+  // 2. Update count
+  const newCount = current + 1;
+
+  await fetch(url, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "X-Master-Key": API_KEY
+    },
+    body: JSON.stringify({ visits: newCount })
+  });
+
+  // 3. Display it
+  const el = document.getElementById("visit-count");
+  if (el) el.textContent = newCount;
+}
+
+incrementVisit();
