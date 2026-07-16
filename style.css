@@ -72,3 +72,9 @@ h1 {
   0% { transform: scale(0.2); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+#stevebot-container {
+  z-index: 9999;
+}
+#stevebot-container {
+  background: #1e1e1e;
+}
