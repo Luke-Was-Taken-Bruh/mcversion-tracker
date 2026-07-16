@@ -1,5 +1,5 @@
 // Your JSONBin info
-const BIN_ID = "6a581c12da38895dfe639966";
+const BIN_ID = "6a590637da38895dfe66e344";
 const API_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
 const LATEST_URL = `${API_URL}/latest`;
 
