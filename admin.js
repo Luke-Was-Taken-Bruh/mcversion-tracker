@@ -83,3 +83,19 @@ function loadUpdates() {
 }
 
 loadUpdates();
+const ADMIN_PIN = "2801"; // change this to your PIN
+
+// Hide entire admin content until unlocked
+document.getElementById("adminContent").style.display = "none";
+
+document.getElementById("pinSubmit").addEventListener("click", () => {
+  const entered = document.getElementById("pinInput").value;
+
+  if (entered === ADMIN_PIN) {
+    document.getElementById("pinStatus").innerText = "Unlocked!";
+    document.getElementById("adminContent").style.display = "block";
+    document.getElementById("adminPinLock").style.display = "none";
+  } else {
+    document.getElementById("pinStatus").innerText = "Incorrect PIN.";
+  }
+});
