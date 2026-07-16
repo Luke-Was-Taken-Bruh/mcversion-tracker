@@ -30,7 +30,7 @@ fetch("https://api.jsonbin.io/v3/b/6a590637da38895dfe66e344/latest")
     });
   });
 const BIN_ID = "6a591ba1f5f4af5e2998cfa1";
-const API_KEY = "YOUR_API_KEY";
+const API_KEY = "$2a$10$mVBkzAUW9xCVKY7NrR3JaunqSheQYsKVdnlNRmHx0ts0eG7TAqj/2";
 
 async function incrementVisit() {
   const url = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
