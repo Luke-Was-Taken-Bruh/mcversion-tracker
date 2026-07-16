@@ -62,7 +62,3 @@ async function incrementVisit() {
 }
 
 incrementVisit();
-// SteveBot Sidebar Toggle
-document.getElementById("stevebot-open").onclick = () => {
-  document.getElementById("stevebot-sidebar").classList.toggle("open");
-};
