@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css">
+  <title>Minecraft Version Tracker – Admin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #adminContent {
+      display: none; /* Hidden until PIN is entered */
+    }
+    #adminPinLock {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- ⭐ LOCKED CONTENT ⭐ -->
+  <!-- ========================= -->
+  <!-- PIN LOCK SCREEN           -->
+  <!-- ========================= -->
+  <div id="adminPinLock">
+    <h2>Admin PIN Required</h2>
+    <input id="pinInput" type="password" placeholder="Enter PIN">
+    <button id="pinSubmit">Unlock</button>
+    <p id="pinStatus"></p>
+  </div>
+
+
+  <!-- ========================= -->
+  <!-- ADMIN CONTENT (HIDDEN)    -->
+  <!-- ========================= -->
   <div id="adminContent">
 
-    <h1>Add Update</h1>
+    <h2>Add Update</h2>
 
     <form id="updateForm">
-      <input type="text" id="version" placeholder="Version (e.g., 1.21.0)" required>
-      <input type="text" id="caption" placeholder="Caption" required>
-      <input type="text" id="image" placeholder="Image URL" required>
+      <label>Version (e.g., 1.21.0)</label><br>
+      <input id="version" type="text"><br><br>
+
+      <label>Caption</label><br>
+      <input id="caption" type="text"><br><br>
+
+      <label>Image URL</label><br>
+      <input id="image" type="text"><br><br>
+
       <button type="submit">Add Update</button>
     </form>
 
@@ -23,16 +57,8 @@
     <div id="updatesList"></div>
 
   </div>
-  <!-- ⭐ END LOCKED CONTENT ⭐ -->
-
-  <!-- ⭐ PIN SECTION AT THE BOTTOM ⭐ -->
-  <div id="adminPinLock" style="margin-top:40px; padding:20px; border-top:1px solid #ccc;">
-    <h3>Admin Access</h3>
-    <input type="password" id="pinInput" placeholder="Enter PIN">
-    <button id="pinSubmit">Unlock</button>
-    <p id="pinStatus"></p>
-  </div>
 
   <script src="admin.js"></script>
+
 </body>
 </html>
