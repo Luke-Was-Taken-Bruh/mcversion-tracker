@@ -59,3 +59,27 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
     document.getElementById("status").innerText = "Error adding update.";
   }
 });
+function loadUpdates() {
+    fetch("https://api.jsonbin.io/v3/b/6a590637da38895dfe66e344/latest")
+        .then(res => res.json())
+        .then(data => {
+            const updates = data.record.updates;
+            const list = document.getElementById("updatesList");
+            list.innerHTML = "";
+
+            updates.forEach((update, index) => {
+                const item = document.createElement("div");
+                item.innerHTML = `
+                    <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+                        <p><strong>Caption:</strong> ${update.caption}</p>
+                        <p><strong>Date:</strong> ${update.date}</p>
+                        <img src="${update.image}" style="max-width:200px; display:block; margin:10px 0;">
+                        <button onclick="editUpdate(${index})">Edit</button>
+                    </div>
+                `;
+                list.appendChild(item);
+            });
+        });
+}
+
+loadUpdates();
