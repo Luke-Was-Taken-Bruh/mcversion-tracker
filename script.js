@@ -29,7 +29,7 @@ fetch("https://api.jsonbin.io/v3/b/6a590637da38895dfe66e344/latest")
       container.appendChild(card);
     });
   });
-const BIN_ID = "YOUR_BIN_ID";
+const BIN_ID = "6a591ba1f5f4af5e2998cfa1";
 const API_KEY = "YOUR_API_KEY";
 
 async function incrementVisit() {
