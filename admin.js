@@ -18,7 +18,7 @@ document.getElementById("updateForm").addEventListener("submit", async (e) => {
 
   try {
     // 1. Get current updates
-    const getRes = await fetch(LATEST_URL, {
+    const saveRes = await fetch("https://api.jsonbin.io/v3/b/6a590637da38895dfe66e344", {
       headers: {
         "X-Master-Key": API_KEY
       }
